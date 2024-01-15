@@ -8,7 +8,6 @@
 </head>
 <body>
 
-<?php require 'header.php'; ?>
 <?php require 'db-connect.php'; ?>
 <div class="search-bar">
 <form action="ad-product.php" method="post">
