@@ -1,0 +1,53 @@
+
+/* Adjust the top margin of the search bar to be the height of the header plus some space */
+.search-bar {
+    width: 100%;
+    margin-top: 100px; /* For example, if your header is 60px tall */
+    margin-bottom: 20px;
+    position: relative; /* If needed, to establish a new stacking context */
+}
+
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap; /* Items will now wrap to the next line */
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.product-item {
+    display: flex; /* Flex layout for the items */
+    flex-direction: column; /* Stack image and info on top of each other */
+    align-items: center; /* Center-align the items */
+    justify-content: space-between; /* Space between image and info */
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width: 200px; /* Fixed width */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.product-image img, .add-product-link img {
+    width: 100%; /* Full width of the parent element */
+    height: auto; /* Height adjusted automatically */
+    object-fit: cover; /* Cover the area without stretching */
+}
+
+/* Clear the float for every 6th product item */
+.product-item:nth-child(6n) {
+    clear: both;
+}
+
+/* Additional styles to center the '+' button if needed */
+.add-product-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.add-product-link img {
+    width: 200px; /* Match the product image width */
+    height: 200px; /* Match the product image height */
+}
