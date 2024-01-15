@@ -34,7 +34,7 @@
             }
             echo '<div class="product-item">';
             echo '<div class="product-image">';
-            echo '<a href="ad-detail.php?id=' . $row['id'] . '"><img src="' . $row['image'] . '" alt="image"></a>';
+            echo '<a href="manga.php?id=' . $row['id'] . '"><img src="' . $row['image'] . '" alt="image"></a>';
             echo '</div>'; // Close product-image
             echo '<div class="product-info">';
             echo '<p>リスト番号：' . $row['id'] . '</p>';
@@ -54,6 +54,5 @@
 </div>
     
 
-<?php require 'footer.php'; ?>
 </body>
 </html>

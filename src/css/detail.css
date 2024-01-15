@@ -1,0 +1,39 @@
+.container {
+    margin-top: 110px;
+}
+
+.product-container {
+    margin-top: 50px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.edit-delete-buttons {
+    display: flex;
+    justify-content: left; /* Center buttons horizontally */
+    margin-bottom: 10px; /* Space between buttons and image */
+    width: 100%;
+}
+
+.image-and-content {
+    display: flex;
+    justify-content: flex-start; /* Align to the start of the container */
+    align-items: center; /* Align items vertically */
+}
+
+
+.image img {
+    width: 200px; /* Adjust width as needed */
+    height: 150px; /* Adjust height as needed */
+    display: block;
+    margin-right: 50px; /* Space between image and content */
+    align-items: top;
+}
+
+.back-button {
+    /* Style for back button if needed, such as margin-top for spacing */
+    margin-top: 20px; /* Adjust the value as needed */
+    align-self: center; /* This will center the button if it's not full width */
+}
+
