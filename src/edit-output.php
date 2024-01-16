@@ -38,8 +38,16 @@ $pdo=new PDO($connect, USER, PASS);
         if(!file_exists('upload')){
             mkdir('upload');
         }
-        $file='upload/'.basename($_FILES['image']['name'])
-    } 
+        $file='upload/'.basename($_FILES['image']['name']);
+        if (move_upload_file($_FILES['image']['tmp_name'],$image)){
+            echo $image,'のアップロードに成功しました。';
+            echo '<p><img src="',$image,'" alt="image"></p>';
+        } else {
+            echo 'アップロードに失敗しました。';
+        }
+    } else {
+        echo 'ファイルを選択してください。';
+    }
 
     if($sql->execute([$_POST['name'],$_POST['ex'], $_POST['category'],$_POST['status'],$_POST['read_pro'],$_POST['author'],$_POST['artist'],$_POST['image'], $_POST['id']])){
         echo '<font color="red">更新に成功しました。</font>';
