@@ -16,10 +16,7 @@ $id = $name = $ex = $price = $category = $status = $read_pro = $author = $artist
 
 echo '<form action="add-output.php" method="post" enctype="multipart/form-data">';
 echo '<table>';
-echo '<tr><td>リスト番号</td>';
-echo '<td><input type="text" name="id" value="', $id , '">';
-echo '</td></tr>';
-echo '<tr><td>名<漫画/td>';
+echo '<tr><td>漫画名</td>';
 echo '<td><input type="text" name="name" value="', $name , '">';
 echo '</td></tr>';
 echo '<tr><td>概要</td>';
@@ -41,7 +38,7 @@ echo '<tr><td>イラストレーター</td>';
 echo '<td><input type="text" name="artist" value="', $artist , '">';
 echo '</td></tr>';
 echo '<tr><td>商品画像</td>';
-echo '<td><input type="file" name="image">';
+echo '<td><input type="file" name="image" value="', $image , '">';
 echo '</td></tr>';
 echo '</table>';
 echo '<input type="submit" value="確定">';

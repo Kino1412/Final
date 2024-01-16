@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="./css/mylist.css">
 </head>
 <body>
-
+<h1>My Manga List</h1>
 <?php require 'db-connect.php'; ?>
 <div class="search-bar">
-<form action="ad-product.php" method="post">
-    商品検索
+<form action="mylist.php" method="post">
+    漫画検索
     <input type="text" name="keyword">
     <input type="submit" name="検索">
 </form>
@@ -46,7 +46,7 @@
             
     ?>
        <div class="product-item">
-        <a href="product-add.php" class="add-product-link">
+        <a href="add.php" class="add-product-link">
             <img src="image/plus-symbol-button.png" alt="Add Product">
         </a>
     </div>

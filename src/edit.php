@@ -16,6 +16,7 @@
         $sql->execute([$_GET['id']]);
         foreach ($sql as $row){
             echo '<form action="edit-output.php" method="post" enctype="multipart/form-data">';
+            echo '<td><input type="hidden" name="id" value="', $_GET['id'] , '">';
 echo '<table>';
 echo '<tr><td>漫画名</td>';
 echo '<td><input type="text" name="name" value="', $row['name'] , '">';
