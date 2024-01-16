@@ -11,7 +11,7 @@
     <div class="container">
     <?php
 $pdo=new PDO($connect, USER, PASS);
-    $sql=$pdo->prepare('update mylist set name=?, ex=?, category=?, status=?, read_pro=?, author=?, artist=?, image=? where id=?');
+    $sql=$pdo->prepare('update mylist set name=?, ex=?, category=?, status=?, read_pro=?, author=?, artist=? where id=?');
     
     if (empty($_POST['name'])) {
         echo '漫画名を入力してください。';
@@ -35,13 +35,13 @@ $pdo=new PDO($connect, USER, PASS);
         echo 'を入力してください。';
     } else
     if (is_uploaded_file($_FILES['image']['tmp_name'])){
-        if(!file_exists('upload')){
-            mkdir('upload');
+        if(!file_exists('image')){
+            mkdir('image');
         }
         $file='upload/'.basename($_FILES['image']['name']);
-        if (move_upload_file($_FILES['image']['tmp_name'],$image)){
-            echo $image,'のアップロードに成功しました。';
-            echo '<p><img src="',$image,'" alt="image"></p>';
+        if (move_uploaded_file($_FILES['image']['tmp_name'],$file)){
+            echo $file,'のアップロードに成功しました。';
+            echo '<p><img src="',$file,'" alt="image"></p>';
         } else {
             echo 'アップロードに失敗しました。';
         }
@@ -49,7 +49,7 @@ $pdo=new PDO($connect, USER, PASS);
         echo 'ファイルを選択してください。';
     }
 
-    if($sql->execute([$_POST['name'],$_POST['ex'], $_POST['category'],$_POST['status'],$_POST['read_pro'],$_POST['author'],$_POST['artist'],$_POST['image'], $_POST['id']])){
+    if(isset($_POST['id']) && $sql->execute([$_POST['name'],$_POST['ex'], $_POST['category'],$_POST['status'],$_POST['read_pro'],$_POST['author'],$_POST['artist'],$_POST['image'], $_POST['id']])){    
         echo '<font color="red">更新に成功しました。</font>';
     }else{
         echo '<font color="red">更新に失敗しました。</font>';
@@ -63,6 +63,5 @@ $pdo=new PDO($connect, USER, PASS);
    
 ?>
 </div>
-<?php require 'footer.php';?>
 </body>
 </html>

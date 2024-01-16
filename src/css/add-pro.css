@@ -1,0 +1,15 @@
+.container{
+    margin-top: 100px;
+}
+.product-container {
+    display: flex;
+    align-items: center; /* This will vertically align the image and content */
+    margin-top: 100px;
+}
+
+.image {
+    margin-right: 50px; /* Adjust the margin as needed */
+}
+
+/*.content {
+     If you need to control the width of the content or add padding, do it here. }
