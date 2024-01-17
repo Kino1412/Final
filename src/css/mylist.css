@@ -1,17 +1,32 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
-/* Adjust the top margin of the search bar to be the height of the header plus some space */
+.container {
+    text-align: center; /* Center the content within the container */
+}
+
+/* Header Styles */
+h1 {
+    margin: 20px 0;
+}
+
+/* Search Bar Styles */
 .search-bar {
     width: 100%;
-    margin-top: 100px; /* For example, if your header is 60px tall */
+    margin-top: 20px;
     margin-bottom: 20px;
-    position: relative; /* If needed, to establish a new stacking context */
+    text-align: center; /* Center the text in the search bar */
 }
+
 
 
 .products-container {
     display: flex;
     flex-wrap: wrap; /* Items will now wrap to the next line */
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: flex-start;
 }
 
@@ -47,7 +62,7 @@
     height: 100%;
 }
 
-.add-product-link img {
-    width: 200px; /* Match the product image width */
-    height: 200px; /* Match the product image height */
-}
+/*.add-product-link img {
+    width: 100px; /* Match the product image width 
+    height: auto; /* Match the product image height */
+/*} 

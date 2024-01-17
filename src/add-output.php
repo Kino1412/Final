@@ -49,7 +49,6 @@ $sql = $pdo->prepare('INSERT INTO mylist (name, ex, category, status, read_pro, 
         }
         $file='image/'.basename($_FILES['image']['name']);
         if (move_uploaded_file($_FILES['image']['tmp_name'],$file)){
-            echo $file,'のアップロードに成功しました。';
             echo '<p><img src="',$file,'" alt="image"></p>';
             $sql->execute([$name, $ex, $category, $status, $read_pro, $author, $artist, $file]);
         } else {

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./css/mylist.css">
 </head>
 <body>
+<div class="container"> <!-- Add a container to wrap your content -->
+
 <h1>My Manga List</h1>
 <?php require 'db-connect.php'; ?>
 <div class="search-bar">
@@ -15,6 +17,7 @@
     <input type="text" name="keyword">
     <input type="submit" name="検索">
 </form>
+</div>
 </div>
 <hr>
 <div class="products-container">
@@ -52,7 +55,7 @@
     </div>
         
 </div>
-    
+            
 
 </body>
 </html>
