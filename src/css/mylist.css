@@ -13,15 +13,45 @@ h1 {
     margin: 20px 0;
 }
 
-/* Search Bar Styles */
-.search-bar {
-    width: 100%;
+/* Search Form Styles */
+.search-form-container {
     margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center; /* Center the text in the search bar */
 }
 
+.search-form-3 {
+    display: flex;
+    justify-content: center; /* Center the search bar horizontally */
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid #787878;
+    border-radius: 3px;
+}
 
+.search-form-3 input {
+    width: 83px; /* Adjusted width to one-third */
+    height: 35px; /* Keep height unchanged */
+    padding: 5px 10px; /* Adjusted padding */
+    border: none;
+    box-sizing: border-box;
+    font-size: 1em; /* Keep font size unchanged */
+    outline: none;
+}
+
+.search-form-3 button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 27px; /* Adjusted width to one-third */
+    height: 35px; /* Keep height unchanged */
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.search-form-3 button::after {
+    width: 18px; /* Adjusted width to one-third */
+    height: 18px; /* Keep height unchanged */
+}
 
 .products-container {
     display: flex;

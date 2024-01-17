@@ -11,12 +11,13 @@
 
 <h1>My Manga List</h1>
 <?php require 'db-connect.php'; ?>
-<div class="search-bar">
-<form action="mylist.php" method="post">
-    漫画検索
-    <input type="text" name="keyword">
-    <input type="submit" name="検索">
-</form>
+<div class="search-form-container">
+    <form action="mylist.php" method="post" class="search-form-3">
+        <label>
+            <input type="text" name="keyword" placeholder="キーワードを入力">
+        </label>
+        <button type="submit" aria-label="検索"></button>
+    </form>
 </div>
 </div>
 <hr>
